@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 # Vmware Engine Network Peering [VEN]
 
 resource "google_vmwareengine_network_peering" "vmw-engine-network-peering" {
   for_each                            = length(var.vmw_network_peering) > 0 ? var.vmw_network_peering : {}
   name                                = each.value.name
+  project                             = each.value.project
   description                         = each.value.description
   peer_network                        = each.value.peer_network
   peer_network_type                   = each.value.peer_network_type

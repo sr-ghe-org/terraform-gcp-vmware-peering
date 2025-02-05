@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 variable "vmw_network_peering" {
   description = "VMware network peering configuration"
   type = map(object({
     name                                = string
     description                         = optional(string, null)
+    project                             = string
     peer_network                        = string
     peer_network_type                   = optional(string, "STANDARD")
     vmware_engine_network               = string

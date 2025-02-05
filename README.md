@@ -1,7 +1,6 @@
 
 # Google VMware Engine Peering
 
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -30,7 +29,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_vmw_network_peering"></a> [vmw\_network\_peering](#input\_vmw\_network\_peering) | VMware network peering configuration | <pre>map(object({<br>    name                                = string<br>    description                         = optional(string, null)<br>    peer_network                        = string<br>    peer_network_type                   = optional(string, "STANDARD")<br>    vmware_engine_network               = string<br>    export_custom_routes                = optional(bool, false)<br>    import_custom_routes                = optional(bool, false)<br>    export_custom_routes_with_public_ip = optional(bool, false)<br>    import_custom_routes_with_public_ip = optional(bool, false)<br>  }))</pre> | `{}` | no |
+| <a name="input_vmw_network_peering"></a> [vmw\_network\_peering](#input\_vmw\_network\_peering) | VMware network peering configuration | <pre>map(object({<br>    name                                = string<br>    description                         = optional(string, null)<br>    project                             = string<br>    peer_network                        = string<br>    peer_network_type                   = optional(string, "STANDARD")<br>    vmware_engine_network               = string<br>    export_custom_routes                = optional(bool, false)<br>    import_custom_routes                = optional(bool, false)<br>    export_custom_routes_with_public_ip = optional(bool, false)<br>    import_custom_routes_with_public_ip = optional(bool, false)<br>  }))</pre> | `{}` | no |
 
 ## Outputs
 
